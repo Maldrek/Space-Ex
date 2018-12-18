@@ -1,0 +1,161 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 30px;
+}
+
+.header {
+    height: 95vh;
+    background-image: linear-gradient( 
+        to bottom right, 
+        rgba(60, 28, 204, 0.8), 
+        rgba(16, 9, 35, 0.8) ), 
+        url(../img/space1.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 79%, 0 100%);
+    position: relative;
+}
+
+.logoBox {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo {
+    height: 35px;
+}
+
+.headerText {
+    position: absolute;
+    width: 96%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.primaryHeading {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.headingMain {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+
+    animation: moveInLeft 4s ease-in-out forwards;    
+}
+
+.headingSub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+    margin-top: 30px;
+    opacity: 0;
+
+    animation: moveInRight 4s ease-in-out 2s forwards;
+}
+
+.headingPunch {
+    display: block;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 50px;
+    margin-top: 30px;
+    opacity: 0;
+
+    animation: fadeIn 10s ease 5s forwards;
+}
+
+.animateAfter {
+    animation: upDown 10s ease-in-out 10s infinite;
+}
+
+@keyframes moveInLeft{
+    0% {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight{
+    0% {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    90% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes upDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    20% {
+        transform: translateY(-10px);  
+    }
+
+    40% {
+        transform: translateY(10px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+
+    80% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        tranform: translateY(0);
+    }
+}
