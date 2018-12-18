@@ -41,8 +41,14 @@ body {
     left: 40px;
 }
 
+.logoBox:hover {
+    animation: drawBorderFromCenter 4s ease-in-out;
+}
+
 .logo {
     height: 35px;
+    background: none;
+    padding: 5px;
 }
 
 .headerText {
@@ -51,12 +57,14 @@ body {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .primaryHeading {
     color: #fff;
     text-transform: uppercase;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .headingMain {
@@ -212,6 +220,76 @@ body {
     }
 
     100% {
-        tranform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes drawBorderFromCenter {
+    0% {
+        border: none;
+        opacity: 0;
+    }
+
+    50% {
+        border-right: 1px solid white;
+        border-bottom: 1px solid white;
+    }
+
+    100% {
+        border: 1px solid white;
+        opacity: 1;
+    }
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    border-radius: 10px;
+    display: inline-block;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px) ;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    border: 1px solid white;
+    color: white;
+    opacity: 0;
+    animation: fadeUp 2s ease-out 11s forwards;
+}
+
+.btn-white:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(148, 155, 245, 0.4);
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-white:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(148, 155, 245, 0.3);
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
