@@ -41,14 +41,14 @@ body {
     left: 40px;
 }
 
-.logoBox:hover {
-    animation: drawBorderFromCenter 4s ease-in-out;
-}
-
 .logo {
     height: 35px;
     background: none;
     padding: 5px;
+}
+
+.logoBox:hover {
+    animation: bounce 1.5s linear infinite;
 }
 
 .headerText {
@@ -224,20 +224,29 @@ body {
     }
 }
 
-@keyframes drawBorderFromCenter {
+@keyframes bounce {
     0% {
-        border: none;
-        opacity: 0;
+        transform: translateY(0);
     }
 
-    50% {
-        border-right: 1px solid white;
-        border-bottom: 1px solid white;
+    15% {
+        transform: translateY(-4px);
+    }
+
+    30% {
+        transform: translateY(0);
+    }
+
+    45% {
+        transform: translateY(-4px);
+    }
+
+    60% {
+        transform: translateY(0);
     }
 
     100% {
-        border: 1px solid white;
-        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -267,7 +276,7 @@ body {
     border: 1px solid white;
     color: white;
     opacity: 0;
-    animation: fadeUp 2s ease-out 11s forwards;
+    animation: fadeDown 2s ease-out 11s forwards;
 }
 
 .btn-white:hover {
@@ -282,10 +291,10 @@ body {
     background-color: rgba(255, 255, 255, 0.3);
 }
 
-@keyframes fadeUp {
+@keyframes fadeDown {
     0% {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(-30px);
     }
 
     100% {
