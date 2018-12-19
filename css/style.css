@@ -53,6 +53,7 @@ body {
 }
 
 .logoBox:hover {
+    opacity: 1;
     animation: bounce 1.5s linear infinite;
 }
 
@@ -105,6 +106,8 @@ body {
 .animateAfter {
     animation: spaceFloat 35s ease-in-out 10s infinite;
 }
+
+
 
 @keyframes moveInLeft{
     0% {
@@ -264,6 +267,7 @@ body {
     border-radius: 10px;
     display: inline-block;
     transition: all 0.4s;
+    position: relative;
 }
 
 .btn:hover {
@@ -271,9 +275,17 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0; 
+.btn::after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .5s;
 }
 
 .btn:active {
@@ -289,11 +301,26 @@ body {
 .btn-white:hover {
     box-shadow: 0 10px 30px rgba(148, 155, 245, 0.4);
     background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(55, 19, 153);
+    text-shadow: 1px 1px 2px white;
+    font-weight: bold;
 }
 
 .btn-white:active {
     box-shadow: 0 5px 10px rgba(148, 155, 245, 0.3);
     background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    font-weight: normal;
+}
+
+.btn-white::after {
+    border: 1px solid white;
+    color: white;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.5) scaleY(2);
+    opacity: 0;
 }
 
 .btn-animated {
@@ -319,35 +346,64 @@ body {
         padding: 0;
     }
 
+    .logoBox {
+        top: 20px;
+        left: 20px;
+    }
+
+    .logo {
+        height: 29px;
+        background: none;
+        padding: 4px 7px;
+    }
+
     .headerText {
         top: 50%;
     }
 
+    .primaryHeading {
+        margin-bottom: 20px;
+    }
+
     .headingMain {
-        font-size: 40px;
+        font-size: 30px;
         letter-spacing: 35px;
     }   
     
     .headingSub {
-        font-size: 15px;
+        font-size: 13px;
         letter-spacing: 17.4px;
         margin-top: 10px;
     }
     
     .headingPunch {
-        font-size: 23px;
+        font-size: 20px;
         letter-spacing: 35px;
         margin-top: 10px;
     }
 
     .btn:link {
-        font-size: 15px;
+        font-size: 10px;
         padding: 8px 25px;
         border-radius: 10px;
     }
 }
 
 @media all and (max-width: 500px) {
+    
+    .logoBox {
+        top: 40px;
+        left: 40px;
+    }
+
+    .logo {
+        height: 50px;
+        padding: 10px 15px;
+    }
+
+    .primaryHeading {
+        margin-bottom: 100px;
+    }
     
     .headerText {
         top: 50%;
@@ -367,5 +423,11 @@ body {
     .headingPunch {
         font-size: 25px;
         letter-spacing: 35px;
+    }
+
+    .btn:link {
+        font-size: 25px;
+        padding: 8px 25px;
+        border-radius: 10px;
     }
 }
