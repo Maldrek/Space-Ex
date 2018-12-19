@@ -18,6 +18,7 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.7;
+    width: 100vw;
     color: #777;
     padding: 30px;
 }
@@ -53,7 +54,7 @@ body {
 
 .headerText {
     position: absolute;
-    width: 96%;
+    width: 100%;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -69,7 +70,7 @@ body {
 
 .headingMain {
     display: block;
-    font-size: 60px;
+    font-size: 1.5em;
     font-weight: 400;
     letter-spacing: 35px;
 
@@ -78,18 +79,17 @@ body {
 
 .headingSub {
     display: block;
-    font-size: 20px;
+    font-size: 0.7em;
     font-weight: 700;
     letter-spacing: 17.4px;
     margin-top: 30px;
     opacity: 0;
-
     animation: moveInRight 4s ease-in-out 2s forwards;
 }
 
 .headingPunch {
     display: block;
-    font-size: 40px;
+    font-size: 1.3em;
     font-weight: 700;
     letter-spacing: 50px;
     margin-top: 30px;
@@ -300,5 +300,62 @@ body {
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media all and (max-width: 850px) {
+
+    body {
+        padding: 0;
+    }
+
+    .headerText {
+        top: 50%;
+    }
+
+    .headingMain {
+        font-size: 40px;
+        letter-spacing: 35px;
+    }   
+    
+    .headingSub {
+        font-size: 15px;
+        letter-spacing: 17.4px;
+        margin-top: 10px;
+    }
+    
+    .headingPunch {
+        font-size: 23px;
+        letter-spacing: 35px;
+        margin-top: 10px;
+    }
+
+    .btn:link {
+        font-size: 15px;
+        padding: 8px 25px;
+        border-radius: 10px;
+    }
+}
+
+@media all and (max-width: 500px) {
+    
+    .headerText {
+        top: 50%;
+        left: 53%;
+    }
+
+    .headingMain {
+        font-size: 40px;
+        letter-spacing: 14px;
+    }
+
+    .headingSub {
+        font-size: 15px;
+        letter-spacing: 17.4px;
+    }
+
+    .headingPunch {
+        font-size: 25px;
+        letter-spacing: 35px;
     }
 }
