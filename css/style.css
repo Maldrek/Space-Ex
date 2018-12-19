@@ -42,12 +42,14 @@ body {
     position: absolute;
     top: 40px;
     left: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
 }
 
 .logo {
-    height: 35px;
+    height: 60px;
     background: none;
-    padding: 5px;
+    padding: 10px;
 }
 
 .logoBox:hover {
