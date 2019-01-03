@@ -317,6 +317,7 @@ body {
 .btn-white {
     border: 1px solid white;
     color: white;
+    margin-right: 30px;
 }
 
 .btn-white:hover {
@@ -444,6 +445,10 @@ body {
     .headingPunch {
         font-size: 25px;
         letter-spacing: 35px;
+    }
+
+    .btn-white {
+        margin-right: 20px;
     }
 
     .btn:link {
