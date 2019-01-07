@@ -50,8 +50,8 @@ body {
     /* transition: all 30s; */
 }
 
-.header .header_background,
-.header .header_background {
+.header .header__background,
+.header .header__background {
     animation: grow 120s ease-in-out infinite;
     animation-fill-mode: forwards;
 }
