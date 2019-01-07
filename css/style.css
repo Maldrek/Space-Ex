@@ -7,21 +7,27 @@ Dark green: #28b485
 
 */
 
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 1.7;
     overflow-x: hidden;
-    width: 100vw;
     color: #777;
-    padding: 30px;
+    padding: 3rem;
+    box-sizing: border-box;
 }
 
 .header {
@@ -31,7 +37,7 @@ body {
     position: relative;
 }
 
-.headerStuff {
+.header__background {
     width: 100%;
     height: 100%;
     background-image: linear-gradient( 
@@ -44,32 +50,32 @@ body {
     /* transition: all 30s; */
 }
 
-.header .headerStuff,
-.header .headerStuff {
+.header .header_background,
+.header .header_background {
     animation: grow 120s ease-in-out infinite;
     animation-fill-mode: forwards;
 }
 
-.logoBox {
+.header__logoBox {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
     border: 1px solid white;
     border-radius: 50%;
 }
 
-.logo {
-    height: 60px;
+.header__logo {
+    height: 5.5rem;
     background: none;
-    padding: 10px;
+    padding: 1rem;
 }
 
-.logoBox:hover {
+.header__logoBox:hover {
     opacity: 1;
     animation: bounce 1.5s linear infinite;
 }
 
-.headerText {
+.header__text {
     position: absolute;
     width: 100%;
     top: 40%;
@@ -78,37 +84,37 @@ body {
     text-align: center;
 }
 
-.primaryHeading {
+.heading-primary {
     color: #fff;
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 50px;
 }
 
-.headingMain {
+.heading--main {
     display: block;
     font-size: 1.5em;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
 
     animation: moveInLeft 4s ease-in-out forwards;    
 }
 
-.headingSub {
+.heading--sub {
     display: block;
     font-size: 0.7em;
     font-weight: 700;
-    letter-spacing: 17.4px;
+    letter-spacing: 1.74rem;
     margin-top: 30px;
     opacity: 0;
     animation: moveInRight 4s ease-in-out 2s forwards;
 }
 
-.headingPunch {
+.heading--secondSub{
     display: block;
     font-size: 1.3em;
     font-weight: 700;
-    letter-spacing: 50px;
+    letter-spacing: 5rem;
     margin-top: 30px;
     opacity: 0;
 
@@ -124,7 +130,7 @@ body {
 @keyframes moveInLeft{
     0% {
         opacity: 0;
-        transform: translateX(-200px);
+        transform: translateX(-20rem);
     }
 
     100% {
@@ -136,7 +142,7 @@ body {
 @keyframes moveInRight{
     0% {
         opacity: 0;
-        transform: translateX(200px);
+        transform: translateX(20rem);
     }
 
     100% {
@@ -167,75 +173,75 @@ body {
     }
 
     5% {
-        transform: translateY(-10px);
+        transform: translateY(-1rem);
     }
 
     10% {
-        transform: translateY(10px);
+        transform: translateY(1rem);
     }
 
     15% {
-        transform: translateY(-10px);
+        transform: translateY(-1rem);
     }
 
     20% {
-        transform: translateY(10px);  
+        transform: translateY(1rem);  
     }
 
     25% {
-        transform: translateY(-10px);
+        transform: translateY(-1rem);
     }
 
     30% {
-        transform: translateY(10px);
+        transform: translateY(1rem);
     }
 
     35% {
-        transform: translateY(-10px);
+        transform: translateY(-1rem);
     }
 
     40% {
-        transform: translateY(10px);
+        transform: translateY(1rem);
     }
 
     45% {
-        transform: translateY(-10px);
+        transform: translateY(-1rem);
     }
 
     50% {
-        transform: translateY(10px);
+        transform: translateY(1rem);
     }
 
     55% {
-        transform: translateY(-10px);
+        transform: translateY(-1rem);
     }
 
     60% {
-        transform: translateY(10px);
+        transform: translateY(1rem);
     }
 
     65% {
-        transform: translateY(-10px);
+        transform: translateY(-1rem);
     }
 
     70% {
-        transform: translateY(10px);
+        transform: translateY(1rem);
     }
 
     75% {
-        transform: translateY(-10px);
+        transform: translateY(-1rem);
     }
 
     80% {
-        transform: translateY(10px);
+        transform: translateY(1rem);
     }
 
     85% {
-        transform: translateY(-10px);
+        transform: translateY(-1rem);
     }
 
     90% {
-        transform: translateY(10px);
+        transform: translateY(1rem);
     }
 
     100% {
@@ -249,7 +255,7 @@ body {
     }
 
     15% {
-        transform: translateY(-4px);
+        transform: translateY(-0.4rem);
     }
 
     30% {
@@ -257,7 +263,7 @@ body {
     }
 
     45% {
-        transform: translateY(-4px);
+        transform: translateY(-0.4rem);
     }
 
     60% {
@@ -284,8 +290,8 @@ body {
     text-decoration: none;
     font-size: 20px;
     font-weight: 500;
-    padding: 10px 30px;
-    border-radius: 10px;
+    padding: 1rem 30px;
+    border-radius: 1rem;
     display: inline-block;
     transition: all 0.4s;
     position: relative;
@@ -293,7 +299,7 @@ body {
 
 .btn:hover {
     transform: translateY(-3px) ;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .btn::after {
@@ -301,7 +307,7 @@ body {
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 1rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -311,17 +317,18 @@ body {
 
 .btn:active {
     transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .btn-white {
     border: 1px solid white;
     color: white;
     margin-right: 30px;
+    font-size: 1.6rem;
 }
 
 .btn-white:hover {
-    box-shadow: 0 10px 30px rgba(148, 155, 245, 0.4);
+    box-shadow: 0 1rem 30px rgba(148, 155, 245, 0.4);
     background-color: rgba(255, 255, 255, 0.5);
     color: white;
     text-shadow: 0px 0px 5px rgb(55, 19, 153);
@@ -329,7 +336,7 @@ body {
 }
 
 .btn-white:active {
-    box-shadow: 0 5px 10px rgba(148, 155, 245, 0.3);
+    box-shadow: 0 5px 1rem rgba(148, 155, 245, 0.3);
     background-color: rgba(255, 255, 255, 0.3);
     color: white;
     font-weight: bold;
@@ -362,87 +369,136 @@ body {
     }
 }
 
+@media all and (max-width: 1050px) {
+
+    body {
+        padding: 0;
+    }
+
+    .header__logoBox {
+        top: 40px;
+        left: 40px;
+    }
+
+    .header__logo {
+        height: 4rem;
+        background: none;
+        padding: 4px 7px;
+    }
+
+    .header_text {
+        top: 40%;
+    }
+
+    .heading--primary {
+        margin-bottom: 100px;
+    }
+
+    .heading--main {
+        font-size: 5rem;
+        letter-spacing: 35px;
+    }   
+    
+    .heading--sub {
+        font-size: 3rem;
+        letter-spacing: 17.4px;
+        margin-top: 1rem;
+    }
+    
+    .heading--secondSub{
+        font-size: 4rem;
+        letter-spacing: 35px;
+        margin-top: 1rem;
+    }
+
+    .btn:link {
+        font-size: 2.5rem;
+        padding: 8px 25px;
+        border-radius: 1rem;
+    }
+}
+
 @media all and (max-width: 850px) {
 
     body {
         padding: 0;
     }
 
-    .logoBox {
-        top: 20px;
-        left: 20px;
+    .header__logoBox {
+        top: 40px;
+        left: 40px;
     }
 
-    .logo {
-        height: 29px;
+    .header__logo {
+        height: 4rem;
         background: none;
         padding: 4px 7px;
     }
 
-    .headerText {
+    .header__text {
         top: 50%;
     }
 
-    .primaryHeading {
-        margin-bottom: 20px;
+    .heading-primary {
+        margin-bottom: 30px;
     }
 
-    .headingMain {
+    .heading--main {
         font-size: 30px;
         letter-spacing: 35px;
     }   
     
-    .headingSub {
+    .heading--sub{
         font-size: 13px;
         letter-spacing: 17.4px;
-        margin-top: 10px;
+        margin-top: 1rem;
     }
     
-    .headingPunch {
+    .heading--secondSub {
         font-size: 20px;
         letter-spacing: 35px;
-        margin-top: 10px;
+        margin-top: 1rem;
     }
 
     .btn:link {
-        font-size: 10px;
+        font-size: 1.3rem;
         padding: 8px 25px;
-        border-radius: 10px;
+        border-radius: 1rem;
     }
 }
 
 @media all and (max-width: 500px) {
     
-    .logoBox {
+    .header__logoBox {
         top: 40px;
         left: 40px;
     }
 
-    .logo {
+    .header__logo {
         height: 50px;
-        padding: 10px 15px;
+        padding: 1rem 15px;
     }
 
-    .primaryHeading {
+    .heading-primary {
         margin-bottom: 100px;
     }
     
-    .headerText {
+    .header__text {
         top: 50%;
         left: 53%;
     }
 
-    .headingMain {
+    .heading--main {
         font-size: 40px;
         letter-spacing: 14px;
     }
 
-    .headingSub {
+    .heading--sub {
         font-size: 15px;
         letter-spacing: 17.4px;
     }
 
-    .headingPunch {
+    .heading--secondSub{
         font-size: 25px;
         letter-spacing: 35px;
     }
@@ -452,8 +508,8 @@ body {
     }
 
     .btn:link {
-        font-size: 25px;
-        padding: 8px 25px;
-        border-radius: 10px;
+        font-size: 2rem;
+        padding: .8rem 2.5rem;
+        border-radius: 1rem;
     }
 }
