@@ -1,0 +1,170 @@
+// Animations
+
+@keyframes moveInLeft{
+    0% {
+        opacity: 0;
+        transform: translateX(-20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight{
+    0% {
+        opacity: 0;
+        transform: translateX(20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    90% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes spaceFloat {
+    0% {
+        transform: translateY(0);
+    }
+
+    5% {
+        transform: translateY(-1rem);
+    }
+
+    10% {
+        transform: translateY(1rem);
+    }
+
+    15% {
+        transform: translateY(-1rem);
+    }
+
+    20% {
+        transform: translateY(1rem);  
+    }
+
+    25% {
+        transform: translateY(-1rem);
+    }
+
+    30% {
+        transform: translateY(1rem);
+    }
+
+    35% {
+        transform: translateY(-1rem);
+    }
+
+    40% {
+        transform: translateY(1rem);
+    }
+
+    45% {
+        transform: translateY(-1rem);
+    }
+
+    50% {
+        transform: translateY(1rem);
+    }
+
+    55% {
+        transform: translateY(-1rem);
+    }
+
+    60% {
+        transform: translateY(1rem);
+    }
+
+    65% {
+        transform: translateY(-1rem);
+    }
+
+    70% {
+        transform: translateY(1rem);
+    }
+
+    75% {
+        transform: translateY(-1rem);
+    }
+
+    80% {
+        transform: translateY(1rem);
+    }
+
+    85% {
+        transform: translateY(-1rem);
+    }
+
+    90% {
+        transform: translateY(1rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    15% {
+        transform: translateY(-0.4rem);
+    }
+
+    30% {
+        transform: translateY(0);
+    }
+
+    45% {
+        transform: translateY(-0.4rem);
+    }
+
+    60% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(3);
+    }
+}
+
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

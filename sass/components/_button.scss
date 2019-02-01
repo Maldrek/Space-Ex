@@ -1,0 +1,75 @@
+.btn {
+
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 500;
+        padding: 1rem 30px;
+        border-radius: 1rem;
+        display: inline-block;
+        transition: all 0.4s;
+        position: relative;
+    }
+
+    &:hover {
+        transform: translateY(-3px) ;
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    }
+
+    &::after {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 1rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .5s;
+    }
+
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
+    }
+
+    &-white {
+        border: 1px solid white;
+        color: white;
+        margin-right: 30px;
+        font-size: 1.6rem;
+
+        &:hover {
+            box-shadow: 0 1rem 30px rgba(148, 155, 245, 0.4);
+            background-color: rgba($color-white, 0.5);
+            color: white;
+            text-shadow: 0px 0px 5px $color-primary;
+            font-weight: bold;
+        }
+    
+        &:active {
+            box-shadow: 0 5px 1rem rgba(148, 155, 245, 0.3);
+            background-color: rgba(255, 255, 255, 0.3);
+            color: white;
+            font-weight: bold;
+        }
+    
+        &::after {
+            border: 1px solid white;
+            color: white;
+        }
+    }
+
+    &:hover::after {
+        transform: scaleX(1.5) scaleY(2);
+        opacity: 0;
+    }
+
+    &-animated {
+        animation: fadeDown 2s ease-out 11s;
+        animation-fill-mode: backwards;
+    }
+}

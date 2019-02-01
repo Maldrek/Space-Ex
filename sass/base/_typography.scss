@@ -1,0 +1,52 @@
+// Floating text in header
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    overflow-x: hidden;
+    color: $color-grey;
+    padding: 3rem;
+}
+
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 50px;
+
+    .heading--main {
+        display: block;
+        font-size: 1.5em;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+    
+        animation: moveInLeft 4s ease-in-out forwards;    
+    }
+    
+    .heading--sub {
+        display: block;
+        font-size: 0.7em;
+        font-weight: 700;
+        letter-spacing: 1.74rem;
+        margin-top: 30px;
+        opacity: 0;
+        animation: moveInRight 4s ease-in-out 2s forwards;
+    }
+    
+    .heading--secondSub{
+        display: block;
+        font-size: 1.3em;
+        font-weight: 700;
+        letter-spacing: 5rem;
+        margin-top: 30px;
+        opacity: 0;
+    
+        animation: fadeIn 10s ease 5s forwards;
+    }
+    
+    .animateAfter {
+        animation: spaceFloat 35s ease-in-out 10s infinite;
+    }
+}
