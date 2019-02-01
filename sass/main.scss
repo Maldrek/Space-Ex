@@ -1,0 +1,517 @@
+@import './base/base';
+
+
+// blues
+$color-primary: rgb(60, 28, 204);
+$color-secondary: rgb(39, 19, 129);
+$color-dark: rgb(16, 9, 35);
+
+// reds
+$color-red-light: rgb(218, 26, 26);
+$color-red-med: rgb(163, 19, 19);
+$color-red-dark: rgb(97, 11, 11);
+
+// neutrals
+$color-black: #000;
+$color-white: #fff;
+$color-grey: #aaa;
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    overflow-x: hidden;
+    color: $color-grey;
+    padding: 3rem;
+    box-sizing: border-box;
+}
+
+// Header
+
+.header {
+    height: 95vh;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 79%, 0 100%);
+    position: relative;
+
+    &__background {
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient( 
+            to bottom right, 
+            rgba($color-primary, 0.6), 
+            rgba($color-dark, 0.8) ), 
+            url(../img/space1.jpg);
+        background-size: cover;
+        background-position: top;
+        /* transition: all 30s; */
+    }
+
+    & .header__background {
+        animation: grow 120s ease-in-out infinite;
+        animation-fill-mode: forwards;
+    }
+    
+    &__logoBox {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+        border: 1px solid white;
+        border-radius: 50%;
+    }
+    
+    &__logo {
+        height: 5.5rem;
+        background: none;
+        padding: 1rem;
+    }
+    
+    &__logoBox:hover {
+        opacity: 1;
+        animation: bounce 1.5s linear infinite;
+    }
+    
+    &__text {
+        position: absolute;
+        width: 100%;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+
+// Floating text in header
+
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 50px;
+
+    .heading--main {
+        display: block;
+        font-size: 1.5em;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+    
+        animation: moveInLeft 4s ease-in-out forwards;    
+    }
+    
+    .heading--sub {
+        display: block;
+        font-size: 0.7em;
+        font-weight: 700;
+        letter-spacing: 1.74rem;
+        margin-top: 30px;
+        opacity: 0;
+        animation: moveInRight 4s ease-in-out 2s forwards;
+    }
+    
+    .heading--secondSub{
+        display: block;
+        font-size: 1.3em;
+        font-weight: 700;
+        letter-spacing: 5rem;
+        margin-top: 30px;
+        opacity: 0;
+    
+        animation: fadeIn 10s ease 5s forwards;
+    }
+    
+    .animateAfter {
+        animation: spaceFloat 35s ease-in-out 10s infinite;
+    }
+}
+
+.btn {
+
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 500;
+        padding: 1rem 30px;
+        border-radius: 1rem;
+        display: inline-block;
+        transition: all 0.4s;
+        position: relative;
+    }
+
+    &:hover {
+        transform: translateY(-3px) ;
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    }
+
+    &::after {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 1rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .5s;
+    }
+
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
+    }
+
+    &-white {
+        border: 1px solid white;
+        color: white;
+        margin-right: 30px;
+        font-size: 1.6rem;
+
+        &:hover {
+            box-shadow: 0 1rem 30px rgba(148, 155, 245, 0.4);
+            background-color: rgba($color-white, 0.5);
+            color: white;
+            text-shadow: 0px 0px 5px $color-primary;
+            font-weight: bold;
+        }
+    
+        &:active {
+            box-shadow: 0 5px 1rem rgba(148, 155, 245, 0.3);
+            background-color: rgba(255, 255, 255, 0.3);
+            color: white;
+            font-weight: bold;
+        }
+    
+        &::after {
+            border: 1px solid white;
+            color: white;
+        }
+    }
+
+    &:hover::after {
+        transform: scaleX(1.5) scaleY(2);
+        opacity: 0;
+    }
+
+    &-animated {
+        animation: fadeDown 2s ease-out 11s;
+        animation-fill-mode: backwards;
+    }
+}
+
+
+
+// Animations
+
+@keyframes moveInLeft{
+    0% {
+        opacity: 0;
+        transform: translateX(-20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight{
+    0% {
+        opacity: 0;
+        transform: translateX(20rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    90% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes spaceFloat {
+    0% {
+        transform: translateY(0);
+    }
+
+    5% {
+        transform: translateY(-1rem);
+    }
+
+    10% {
+        transform: translateY(1rem);
+    }
+
+    15% {
+        transform: translateY(-1rem);
+    }
+
+    20% {
+        transform: translateY(1rem);  
+    }
+
+    25% {
+        transform: translateY(-1rem);
+    }
+
+    30% {
+        transform: translateY(1rem);
+    }
+
+    35% {
+        transform: translateY(-1rem);
+    }
+
+    40% {
+        transform: translateY(1rem);
+    }
+
+    45% {
+        transform: translateY(-1rem);
+    }
+
+    50% {
+        transform: translateY(1rem);
+    }
+
+    55% {
+        transform: translateY(-1rem);
+    }
+
+    60% {
+        transform: translateY(1rem);
+    }
+
+    65% {
+        transform: translateY(-1rem);
+    }
+
+    70% {
+        transform: translateY(1rem);
+    }
+
+    75% {
+        transform: translateY(-1rem);
+    }
+
+    80% {
+        transform: translateY(1rem);
+    }
+
+    85% {
+        transform: translateY(-1rem);
+    }
+
+    90% {
+        transform: translateY(1rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    15% {
+        transform: translateY(-0.4rem);
+    }
+
+    30% {
+        transform: translateY(0);
+    }
+
+    45% {
+        transform: translateY(-0.4rem);
+    }
+
+    60% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(3);
+    }
+}
+
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// iPad and med sized screens
+
+@media all and (max-width: 1050px) {
+
+    body {
+        padding: 0;
+    }
+
+    .header {
+
+        &__logoBox {
+            top: 40px;
+            left: 40px;
+        }
+    
+        &__logo {
+            height: 4rem;
+            background: none;
+            padding: 4px 7px;
+        }
+    
+        &_text {
+            top: 40%;
+        }
+    }
+
+    .heading--primary {
+        margin-bottom: 100px;
+
+        .heading--main {
+            font-size: 5rem;
+            letter-spacing: 35px;
+        }   
+        
+        .heading--sub {
+            font-size: 3rem;
+            letter-spacing: 17.4px;
+            margin-top: 1rem;
+        }
+        
+        .heading--secondSub{
+            font-size: 4rem;
+            letter-spacing: 35px;
+            margin-top: 1rem;
+        }
+    }
+
+    .btn:link {
+        font-size: 2.5rem;
+        padding: 8px 25px;
+        border-radius: 1rem;
+    }
+}
+
+@media all and (max-width: 850px) {
+
+    .header__text {
+        top: 50%;
+    }
+
+    .heading-primary {
+        margin-bottom: 30px;
+
+        .heading--main {
+            font-size: 30px;
+            letter-spacing: 35px;
+        }   
+        
+        .heading--sub{
+            font-size: 13px;
+            letter-spacing: 17.4px;
+            margin-top: 1rem;
+        }
+        
+        .heading--secondSub {
+            font-size: 20px;
+            letter-spacing: 35px;
+            margin-top: 1rem;
+        }
+    }
+
+    .btn:link {
+        font-size: 1.3rem;
+        padding: 8px 25px;
+        border-radius: 1rem;
+    }
+}
+
+@media all and (max-width: 500px) {
+
+    .header__logo {
+        height: 50px;
+        padding: 1rem 15px;
+    }
+
+    .heading-primary {
+        margin-bottom: 100px;
+
+        .heading--main {
+            font-size: 40px;
+            letter-spacing: 14px;
+        }
+    
+        .heading--sub {
+            font-size: 15px;
+            letter-spacing: 17.4px;
+        }
+    
+        .heading--secondSub{
+            font-size: 25px;
+            letter-spacing: 35px;
+        }
+    }
+    
+    .header__text {
+        top: 50%;
+        left: 53%;
+    }
+
+    .btn-white {
+        margin-right: 20px;
+    }
+
+    .btn:link {
+        font-size: 2rem;
+        padding: .8rem 2.5rem;
+        border-radius: 1rem;
+    }
+}
