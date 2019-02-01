@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -76,3 +77,18 @@ function search() {
 		});
 };
 
+=======
+function drinkName(parameter) {
+	console.log(parameter);
+	//return random drink using user input
+};
+
+
+// drinkName('gin');
+// drinkName('vodka');
+// drinkName('rum');
+
+var drinkType = 'gin';
+
+drinkName(drinkType);
+>>>>>>> 868dacee0a83a42dc34914aadeb956e661a3b215
