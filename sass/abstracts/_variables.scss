@@ -3,7 +3,7 @@
 // blues
 $color-primary: rgb(60, 28, 204);
 $color-secondary: rgb(39, 19, 129);
-$color-dark: rgb(16, 9, 35);
+$color-primary-dark: rgb(30, 9, 88);
 
 // reds
 $color-red-light: rgb(218, 26, 26);
@@ -14,3 +14,10 @@ $color-red-dark: rgb(97, 11, 11);
 $color-black: #000;
 $color-white: #fff;
 $color-grey: #aaa;
+$color-grey-light: whitesmoke;
+
+// GRID 
+
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;
