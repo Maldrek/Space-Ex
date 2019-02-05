@@ -60,19 +60,19 @@
         &-1 {
             background-image:
             linear-gradient(to right bottom, $color-primary, $color-primary-dark),
-            url('../../img/spx-moon.jpg');
+            url('../img/spx-moon.jpg');
         }
 
         &-2 {
             background-image: 
             linear-gradient(to right bottom, $color-red-light, $color-red-dark),
-            url('../../img/spx-mars.jpg');
+            url('../img/spx-mars.jpg');
         }
 
         &-3 {
             background-image: 
             linear-gradient(to right bottom, $color-purple-light, $color-purple-dark),
-            url('../../img/spx-blackhole.jpg');
+            url('../img/spx-blackhole.jpg');
         }
     }
 
