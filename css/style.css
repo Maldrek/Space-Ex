@@ -347,6 +347,38 @@ body {
       background-image: linear-gradient(to right bottom, #da1a1a, #610b0b), url("../../img/spx-mars.jpg"); }
     .card_picture-3 {
       background-image: linear-gradient(to right bottom, #9333ac, #41144d), url("../../img/spx-blackhole.jpg"); }
+  .card_heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    text-align: right;
+    width: 67%; }
+  .card_heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone; }
+    .card_heading-span-1 {
+      background-image: linear-gradient(to right bottom, rgba(60, 28, 204, 0.85), rgba(30, 9, 88, 0.85)); }
+    .card_heading-span-2 {
+      background-image: linear-gradient(to right bottom, rgba(218, 26, 26, 0.85), rgba(97, 11, 11, 0.85)); }
+    .card_heading-span-3 {
+      background-image: linear-gradient(to right bottom, rgba(147, 51, 172, 0.85), rgba(65, 20, 77, 0.85)); }
+  .card_details {
+    padding: 3rem; }
+    .card_details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card_details ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem; }
+        .card_details ul li:not(:last-child) {
+          border-bottom: 1px solid #aaa; }
 
 .row {
   max-width: 114rem;
