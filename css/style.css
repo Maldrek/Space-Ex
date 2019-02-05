@@ -306,11 +306,47 @@ body {
     box-shadow: 0 1.5 5rem rgba(255, 255, 255, 0.8); }
 
 .card {
-  background-color: orangered;
-  height: 50rem;
-  transition: all .5s; }
-  .cardhover {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem; }
+  .card_side {
+    height: 50rem;
+    transition: 1.2s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+    .card_side-front {
+      background-color: #fff; }
+    .card_side-back {
+      transform: rotateY(-180deg); }
+      .card_side-back-1 {
+        background: linear-gradient(to right bottom, #3c1ccc, #1e0958); }
+      .card_side-back-2 {
+        background: linear-gradient(to right bottom, #da1a1a, #610b0b); }
+      .card_side-back-3 {
+        background: linear-gradient(to right bottom, #9333ac, #41144d); }
+  .card:hover .card_side-front {
     transform: rotateY(180deg); }
+  .card:hover .card_side-back {
+    transform: rotateY(0deg); }
+  .card_picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: color;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    .card_picture-1 {
+      background-image: linear-gradient(to right bottom, #3c1ccc, #1e0958), url("../../img/spx-moon.jpg"); }
+    .card_picture-2 {
+      background-image: linear-gradient(to right bottom, #da1a1a, #610b0b), url("../../img/spx-mars.jpg"); }
+    .card_picture-3 {
+      background-image: linear-gradient(to right bottom, #9333ac, #41144d), url("../../img/spx-blackhole.jpg"); }
 
 .row {
   max-width: 114rem;
@@ -342,6 +378,7 @@ body {
 .header {
   height: 95vh;
   overflow: hidden;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 79%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 79%, 0 100%);
   position: relative; }
   .header__background {

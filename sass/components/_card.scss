@@ -1,9 +1,78 @@
 .card {
-    background-color: orangered;
-    height: 50rem;
-    transition: .5s;
 
-    &hover {
+    // Y AXIS FLIP FUNCTIONALITY
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 50rem;
+
+    &_side {
+        height: 50rem;
+        transition: 1.2s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+        &-front {
+            background-color: $color-white;
+        }
+
+        &-back {
+            transform: rotateY(-180deg);
+
+            &-1{
+                background: linear-gradient(to right bottom, $color-primary, $color-primary-dark);
+            }
+
+            &-2{
+                background: linear-gradient(to right bottom, $color-red-light, $color-red-dark);
+            }
+
+            &-3{
+                background: linear-gradient(to right bottom, $color-purple-light, $color-purple-dark);
+            }
+        }
+    }
+
+    &:hover &_side-front {
         transform: rotateY(180deg);
+    }
+
+    &:hover &_side-back {
+        transform: rotateY(0deg);
+    }
+
+    // FRONT SIDE STYLING 
+
+    &_picture {
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode: color;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+
+        &-1 {
+            background-image:
+            linear-gradient(to right bottom, $color-primary, $color-primary-dark),
+            url('../../img/spx-moon.jpg');
+        }
+
+        &-2 {
+            background-image: 
+            linear-gradient(to right bottom, $color-red-light, $color-red-dark),
+            url('../../img/spx-mars.jpg');
+        }
+
+        &-3 {
+            background-image: 
+            linear-gradient(to right bottom, $color-purple-light, $color-purple-dark),
+            url('../../img/spx-blackhole.jpg');
+        }
     }
 }
