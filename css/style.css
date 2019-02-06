@@ -605,7 +605,7 @@ body {
     overflow: hidden;
     display: table;
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0.2);
+    transform: translate(-50%, -50%) scale(0.25);
     transition: .5s .2s; }
   .popup_left {
     width: 33.333333%;
@@ -637,7 +637,7 @@ body {
     visibility: visible; }
   .popup:target .popup_content {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1) !important; }
+    transform: translate(-50%, -50%) scale(1); }
   .popup_close:link, .popup_close:visited {
     color: #333;
     position: absolute;
