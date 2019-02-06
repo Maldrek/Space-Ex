@@ -87,10 +87,12 @@ body {
     font-size: 1.6rem;
     font-weight: 700;
     text-transform: uppercase;
+    color: $color-black-light;
 }
 
 .paragraph {
     font-size: 1.6rem;
+    color: $color-black-light;
 
     &:not(:last-child) {
         margin-bottom: 3rem;
