@@ -259,10 +259,10 @@ body {
     color: white; }
 
 .btn-blue {
-  border: 1px solid #3c1ccc;
+  border: 1px solid #3c1ccc !important;
   color: #3c1ccc;
   margin-right: 30px;
-  font-size: 1.6rem;
+  font-size: 1.6rem !important;
   background-color: transparent; }
   .btn-blue:hover {
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
