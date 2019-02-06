@@ -1,16 +1,20 @@
 .btn {
-
+    &,
     &:link,
     &:visited {
         text-transform: uppercase;
         text-decoration: none;
-        font-size: 20px;
+        font-size: $default-font;
         font-weight: 500;
         padding: 1rem 30px;
         border-radius: 1rem;
         display: inline-block;
         transition: all 0.4s;
         position: relative;
+
+        //CHANGE FOR <BUTTON> ELEMENT
+        border: none;
+        cursor: pointer;
     }
 
     &:hover {
@@ -68,6 +72,7 @@
         color: $color-primary;
         margin-right: 30px;
         font-size: 1.6rem;
+        background-color: transparent;
 
         &:hover {
             box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
@@ -76,7 +81,9 @@
             font-weight: bold;
         }
     
-        &:active {
+        &:active,
+        &:focus {
+            outline: none;
             box-shadow: 0 5px 3rem rgba($color-black, 0.8);
             background-color: rgba($color-primary, 0.8);
             color: white;
