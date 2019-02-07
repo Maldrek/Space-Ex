@@ -117,14 +117,6 @@
     &:target &_content {
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
-
-        @include respond(tab-land) {
-            top: 40%;
-        }
-
-        @include respond(phone) {
-            top: 50%;
-        }
     }
 
     &_close {

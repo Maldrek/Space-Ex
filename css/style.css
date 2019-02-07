@@ -799,12 +799,6 @@ body {
   .popup:target .popup_content {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1); }
-    @media (max-width: 75em) {
-      .popup:target .popup_content {
-        top: 40%; } }
-    @media (max-width: 37.5em) {
-      .popup:target .popup_content {
-        top: 50%; } }
   .popup_close:link, .popup_close:visited {
     color: #333;
     position: absolute;
