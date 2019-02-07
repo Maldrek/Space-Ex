@@ -204,6 +204,10 @@ body {
   .heading-secondary:hover {
     transform: scale(1.2);
     text-shadow: 0rem 1rem 2rem rgba(30, 9, 88, 0.5); }
+    @media (max-width: 37.5em) {
+      .heading-secondary:hover {
+        transform: none;
+        text-shadow: none; } }
 
 .heading-secondary-footer {
   font-size: 3.5rem;
