@@ -25,15 +25,62 @@
     }
 
     &_left {
-        width: 33.333333%;
+        width: 33.33333%;
         display: table-cell;
+
+        @include respond(tab-land) {
+            display: unset;
+            width: 100%;
+
+            .popup_img {
+                width: 50%;
+                display: inline-block;
+                float: left;
+                height: 30rem;
+            }
+        }
+
+        @include respond(phone) {
+            .popup_img {
+                height: 20rem;
+            }
+        }
     }
 
     &_right {
-        width: 66.666667%;
+        width: 66.6666667%;
         display: table-cell;
         vertical-align: middle;
-        padding: 3rem 5rem;
+        padding: 2.5rem 5rem;
+
+        @include respond(tab-land) {
+            display: unset;
+            width: 100%;
+            padding: 2rem 5rem;
+
+            .heading-secondary,
+            .heading-tertiary {
+                display: block;
+                text-align: center;
+            }
+
+            .popup_text {
+                padding: 0 5rem;
+            }
+
+            .btn-blue {
+                display: block;
+                width: 25%;
+                margin: 2rem auto;
+                text-align: center;
+            }
+        }
+
+        @include respond(phone) {
+            .btn-blue {
+                width: 50%;
+            }
+        }
     }
 
     &_img {
@@ -70,6 +117,14 @@
     &:target &_content {
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
+
+        @include respond(tab-land) {
+            top: 40%;
+        }
+
+        @include respond(phone) {
+            top: 50%;
+        }
     }
 
     &_close {
@@ -83,6 +138,10 @@
             text-decoration: none;
             display: inline-block;
             line-height: 1;
+
+            @include respond(tab-land) {
+                color: $color-white;
+            }
         }
 
         &:hover {

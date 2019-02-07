@@ -7,7 +7,6 @@ body {
     line-height: 1.7;
     overflow-x: hidden;
     color: $color-grey;
-    padding: 3rem;
 }
 
 .heading-primary {
@@ -16,34 +15,48 @@ body {
     text-align: center;
     margin-bottom: 50px;
 
-    .heading--main {
+    &--main {
         display: block;
-        font-size: 1.5em;
+        font-size: 6rem;
         font-weight: 400;
         letter-spacing: 3.5rem;
     
-        animation: moveInLeft 4s ease-in-out forwards;    
+        animation: moveInLeft 4s ease-in-out forwards;  
+        
+        @include respond(phone) {
+            letter-spacing: 1rem;
+            font-size: 5rem;
+        }
     }
     
-    .heading--sub {
+    &--sub {
         display: block;
-        font-size: 0.7em;
+        font-size: 2rem;
         font-weight: 700;
         letter-spacing: 1.74rem;
         margin-top: 30px;
         opacity: 0;
         animation: moveInRight 4s ease-in-out 2s forwards;
+
+        @include respond(phone) {
+            letter-spacing: .5rem;
+        }
     }
     
-    .heading--secondSub{
+    &--secondSub {
         display: block;
-        font-size: 1.3em;
+        font-size: 4rem;
         font-weight: 700;
         letter-spacing: 5rem;
         margin-top: 30px;
         opacity: 0;
     
         animation: fadeIn 10s ease 5s forwards;
+
+        @include respond(phone) {
+            letter-spacing: .5rem;
+            font-size: 3rem;
+        }
     }
     
     .animateAfter {
@@ -60,6 +73,14 @@ body {
     -webkit-background-clip: text;
     color: transparent;
     transition: 0.5s;
+
+    @include respond(tab-port) {
+        font-size: 3rem;
+    }
+
+    @include respond(phone) {
+        font-size: 2.5rem;
+    }
 
     &:hover {
         transform: scale(1.2);
