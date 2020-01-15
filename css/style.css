@@ -38,8 +38,6 @@ ORDER: base + typography > general layout + grid > page layout > components
   0% {
     opacity: 0;
     transform: scale(0.8); }
-  90% {
-    opacity: 0%; }
   100% {
     opacity: 1;
     transform: scale(1); } }
@@ -178,7 +176,7 @@ body {
     letter-spacing: 5rem;
     margin-top: 30px;
     opacity: 0;
-    animation: fadeIn 10s ease 5s forwards; }
+    animation: fadeIn 5s ease-in-out 5s forwards; }
     @media (max-width: 37.5em) {
       .heading-primary--secondSub {
         letter-spacing: .5rem;
